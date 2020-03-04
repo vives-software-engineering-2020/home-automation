@@ -68,7 +68,7 @@ The goal of this version is to create software solution that acts as a thermosta
 
 A thermostat can be set to a _wanted temperature_ value for a room. To prevent oscillations and improve efficiency we need to give a dead-zone or _range_ where the thermostat will neither put on the heating nor put on the cooling. Next we need to be able to give the thermostat the _current temperature_ so that it can calculate the result.
 
-![Thermostat](./img/Thermostat.png)
+![Thermostat](./img/thermostat.png)
 
 Create a small TypeScript application that demonstrates the functionality of an `Thermostat` class. The application could have the following class structure.
 
