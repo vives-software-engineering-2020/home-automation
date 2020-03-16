@@ -1,5 +1,7 @@
 # Home Automation
 
+![Markdown Linter](../../workflows/Markdown%20Linter/badge.svg?branch=master)
+
 ℹ️ In this exercise we will apply the course materials from software engineering. The project will start simple and will continue to grow with features and refactorings. It is important to keep up with the extensions as they build further on the exercises that where previously made.
 
 ## Updating exercise instructions
