@@ -234,7 +234,7 @@ The goal of this iteration (version) is to create a package and publish it on np
 ```
 
 * Create an account on [npmjs.org](https://npmjs.org)
-* Replace \[YOUR-NPM-USERNAME\] (including the `[``and ´]) with the username of your account
+* Replace \[YOUR-NPM-USERNAME\] (including the `[` and `]`) with the username of your account
 * Don't forget to add the `@` sign in front.
 * Use this name as the `name` of your project in your `package.json`
 
