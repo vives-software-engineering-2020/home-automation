@@ -303,6 +303,18 @@ Use only `ts-node` to run and test your code, but not the `tsc` command as this 
 
 In order to prevent errors or bugs the project must be checked using a Linter.
 
+### TypeScript dependency
+
+Before continueing, it must be specified that the project uses TypeScript as well. At the moment TypeScript is installed globally, but other environments that will run your code (such as other developers, NPM, GitHub,...) must know that TypeScript is a dependency. This can now easely be solved by executing the following command:
+
+```bash
+npm install typescript --save
+```
+
+This was previously not possible becease the project was lacking a `package.json` file to document and track the projects dependencies.
+
+### Tutorial
+
 The following tutorial gives a clean introduction in how to setup a linter for TypeScript projects: [ESLint for TypeScript](https://khalilstemmler.com/blogs/typescript/eslint-for-typescript)
 
 Follow the steps described in this tutorial and apply them to your project. Keep in mind the following details described below.
