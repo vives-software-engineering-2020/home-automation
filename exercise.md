@@ -387,3 +387,70 @@ Add the following badges to your projects README.md (just below the title) to ge
 ![ESLint](../../workflows/ESLint/badge.svg?branch=master)
 ![Markdown Linter](../../workflows/Markdown%20Linter/badge.svg?branch=master)
 ```
+
+## v0.5 HTTP Temperature Sensor
+
+Instead of using a temperature sensor with hardcoded values, it should be better
+to get the values from a real sensor. Many communication technologies exist to fetch
+sensor data, but HTTP is the easiest and most allround method.
+
+Extend the home automation library with a class that can fetch temperatures from
+a HTTP API. These temperatures can then be used with the thermostat.
+
+This version should add at least 2 classes.
+
+* `HttpTemperatureSensor`: Class that only enables you to fetch a temperature value from a given URL.
+* `HttpThermostat`: A Thermostat that automatically fetches its current temperature value from a given URL.
+
+### `HttpTemperatureSensor` class
+
+The class should be pretty easy to implement. The class should contain a constructor that accepts a string containing
+an URL, and a method `getTemperature()` that returns a number representing the temperature.
+
+You can use an library like [Axios](https://www.npmjs.com/package/axios) to create HTTP requests.
+Don't forget to manage this dependency using npm and the `package.json` file.
+
+Note: Take into account that HTTP requests and responses are _asynchronous_. This will have
+an influence on your code and implementations. Try to keep it asynchronous, it's not a good practice
+to make it behave synchronous. This should not be hard, but you cannot get around it.
+
+### `HttpThermostat` class
+
+This class is an implementation of a Thermostat that accepts a wanted value and a range (just like before),
+and another extra argument in the form of a string that contains an URL. The class should not have an update
+method (the temperature is not updated by calling a function but by an HTTP request), the value should
+get fetched automatically when asking the object for an result (eg: isCooling?, isHeating?, getResult?...)
+
+Note!: **Be wise** and reuse as much code as possible (without copy pasting !). Keep it DRY.
+
+### Testing it out
+
+In order to test your classes you can use the following HTTP API that returns a fake temperature.
+
+[http://dummy-sensors.azurewebsites.net/api/sensor/abba5](http://dummy-sensors.azurewebsites.net/api/sensor/abba5)
+
+### Update project
+
+Don't forget to update your README, npm package, publish to npm, examples,...
+
+## v0.6 Documentation
+
+When publishing a library or project, it is important to document it. Documentation
+makes it possible to let the 'user' of your code know how to use it, and tells what
+your code can do.
+
+Generating documentation for code is pretty easy. You just need to add some comments in
+your code following some specific rules and you are done. Software can then interpret these
+comments or docs and generate a website or any other form of documentation.
+
+More on how to generate documentation can be found in the course [chapter 7 Source code documentation generation](https://software-engineering.devbit.courses/07-documentation/generation.html#annotations)
+
+## Adding Documentation Comments
+
+Add block comments containing documentation to 'all' your classes and methods.
+
+## Update your `README.md`
+
+Add a link in your README file to the documentation website.
+
+Don't forget to update your npm package, publish to npm, examples,...
