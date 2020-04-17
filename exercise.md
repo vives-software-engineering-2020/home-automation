@@ -234,7 +234,7 @@ The goal of this iteration (version) is to create a package and publish it on np
 ```
 
 * Create an account on [npmjs.org](https://npmjs.org)
-* Replace \[YOUR-NPM-USERNAME\] (including the `[``and ´]) with the username of your account
+* Replace \[YOUR-NPM-USERNAME\] (including the `[` and `]`) with the username of your account
 * Don't forget to add the `@` sign in front.
 * Use this name as the `name` of your project in your `package.json`
 
@@ -302,6 +302,18 @@ Use only `ts-node` to run and test your code, but not the `tsc` command as this 
 > **lint**, or a **linter**, is a tool that analyzes source code to flag_ programming errors_, _bugs_, _stylistic errors_, and _suspicious constructs_.
 
 In order to prevent errors or bugs the project must be checked using a Linter.
+
+### TypeScript dependency
+
+Before continueing, it must be specified that the project uses TypeScript as well. At the moment TypeScript is installed globally, but other environments that will run your code (such as other developers, NPM, GitHub,...) must know that TypeScript is a dependency. This can now easely be solved by executing the following command:
+
+```bash
+npm install typescript --save
+```
+
+This was previously not possible becease the project was lacking a `package.json` file to document and track the projects dependencies.
+
+### Tutorial
 
 The following tutorial gives a clean introduction in how to setup a linter for TypeScript projects: [ESLint for TypeScript](https://khalilstemmler.com/blogs/typescript/eslint-for-typescript)
 
