@@ -487,3 +487,36 @@ git pull git@github.com:vives-software-engineering-2020/home-automation.git bugf
 ```
 
 More information about this bug/feature can be found on the [GitHub Blog](https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/)
+
+v0.7.0 Managing Single Responsibility and Dependencies
+
+Next step is to evaluate the 'design' of our project. You might have a working solution
+but maybe your code could be organized better to handle any kind of change (Agile?!).
+
+Some techniques and principles can help you to evaluate and help you to change
+your implementation in order to achieve a better design.
+
+Read the following chapters:
+
+* [Object Oriented Design](https://software-engineering.devbit.courses/08-solid/object-oriented_design.html)
+* [Single Responsibility](https://software-engineering.devbit.courses/08-solid/designing_classes_with_a_single_response.html)
+* [Managing Dependencies](https://software-engineering.devbit.courses/08-solid/managing_dependencies.html)
+
+> Chapters are converter from Ruby implementation, if something is not clear, please
+> let me know
+
+Apply the tips and techniques discussed in those chapters.
+
+Note: Changing your code to enforce Single Responsibility (SRP) and reducing your
+dependencies will not change your current feature set (and thus behavior) that is
+available in your project. This exercise is thus a refactoring in its purest form.
+It will only result in reorganizing and restructure your existing behavior.
+
+Changing the version number with a minor increment, might seem wrong, and your are
+right. But applying SRP end managing dependencies will most likely change your
+the way you use your code, and thus change its object interfaces. This means
+that you will break existing applications, and thus a minor version increment can
+be used to make this clear. (As we are still below v1.0.0, breaking changes are
+allowed with a minor version increment)
+
+Don't forget to update your README, documentation and npm package at the end.
