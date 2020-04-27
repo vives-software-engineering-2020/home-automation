@@ -457,11 +457,11 @@ comments or docs and generate a website or any other form of documentation.
 
 More on how to generate documentation can be found in the course [chapter 7 Source code documentation generation](https://software-engineering.devbit.courses/07-documentation/generation.html#annotations)
 
-## Adding Documentation Comments
+### Adding Documentation Comments
 
 Add block comments containing documentation to 'all' your classes and methods.
 
-## Update your `README.md`
+### Update your `README.md`
 
 Add a link in your README file to the documentation website.
 
@@ -488,7 +488,7 @@ git pull git@github.com:vives-software-engineering-2020/home-automation.git bugf
 
 More information about this bug/feature can be found on the [GitHub Blog](https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/)
 
-v0.7.0 Managing Single Responsibility and Dependencies
+## v0.7.0 Managing Single Responsibility and Dependencies
 
 Next step is to evaluate the 'design' of our project. You might have a working solution
 but maybe your code could be organized better to handle any kind of change (Agile?!).
