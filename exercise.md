@@ -466,3 +466,24 @@ Add block comments containing documentation to 'all' your classes and methods.
 Add a link in your README file to the documentation website.
 
 Don't forget to update your npm package, publish to npm, examples,...
+
+## v0.6.1 GitHub Pages Bug
+
+You might have noticed that the documentation generated with TypeDoc has a bug.
+When visiting your GitHub Pages in the browser, all might seem fine, but some
+links result in a 404 error. This is the result of the Jekyll framework that GitHub
+uses to host the GitHub Pages.
+
+In Jekyll, files starting with an `_` (underscore) are considered special files and
+will it won't copy those file to the final site. Luckily GitHub provides a feature
+to disable the Jekyll processing of the files.
+
+All you need to do is add a file named `.nojeckyll` in your `/docs` directory.
+
+You can pull in this file using the following pull command.
+
+```bash
+git pull git@github.com:vives-software-engineering-2020/home-automation.git bugfix/docs-jekyll
+```
+
+More information about this bug/feature can be found on the [GitHub Blog](https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/)
