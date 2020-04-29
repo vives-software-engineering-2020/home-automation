@@ -520,3 +520,43 @@ be used to make this clear. (As we are still below v1.0.0, breaking changes are
 allowed with a minor version increment)
 
 Don't forget to update your README, documentation and npm package at the end.
+
+### v0.7.1 Automating GitHub Pages fix
+
+When updating your documentation website using the `npm run docs` command, the
+file for the fix of the bug described in `v0.6.1` gets removed. If you are not
+careful, you might commit the removal of this file. If you do commit this, the
+bug will keep on existing in future versions.
+
+The problem exists because the TypeDoc command used in `npm run docs` deletes all
+files in the `/docs` directory by default. Thus also removing the `.nojekyll` file
+created to fix the GitHub Pages bug.
+
+Manually creating this file each time you generate new docs is very error prone.
+The best way to solve this new problem is to automate it.
+
+Step 1) Add a new devdependency called `touch` in your `package.json` file using the
+following command:
+
+```bash
+npm install touch -D
+```
+
+This will install a package that enables us to use the touch command from within 
+JavaScript (and not depend on the operating system)
+
+Step 2) Update your `npm run docs` command in the `package.json`:
+
+Add the following script:
+
+```json
+"nojekyll": "nodetouch docs/.nojekyll",
+```
+
+Update the `docs` script to:
+
+```json
+"docs": "typedoc && npm run nojekyll",
+```
+
+This will make sure the `.nojekyll` file is created after creating the docs.
