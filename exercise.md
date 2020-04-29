@@ -542,7 +542,7 @@ following command:
 npm install touch -D
 ```
 
-This will install a package that enables us to use the touch command from within 
+This will install a package that enables us to use the touch command from within
 JavaScript (and not depend on the operating system)
 
 Step 2) Update your `npm run docs` command in the `package.json`:
