@@ -560,3 +560,41 @@ Update the `docs` script to:
 ```
 
 This will make sure the `.nojekyll` file is created after creating the docs.
+
+## v0.8.0 Unit Tests
+
+When adding code to your projects might not result in the expected behavior. These
+errors are called bugs and are normal to the development process. Solving bugs means
+less time to write code and add useful behavior to your projects. Eliminating bugs
+is thus beneficial to the development cycle. If you don't write bugs, you don't have
+to solve them.
+
+How could you make sure you are not introducing bugs into your code? There is no
+magical solution, but some thing help. Unit Testing is a practice used by software
+developers to detect and reduces bugs in your code. It helps refactoring your code
+without worrying about introducing new bugs.
+
+In chapter [chapter 8 Unit Testing](https://software-engineering.devbit.courses/09-unit-testing/)
+is explained. Read this chapter as it will learn you what unit tests are and how
+they can help your development.
+
+The goal of this version is to add Unit tests to the project. The implementation
+is already there, TDD cannot be used, but we can test our existing behavior using
+unit tests.
+
+Jest is a framework that enables unit testing in JavaScript and TypeScript. Follow
+the [Jest introduction and tutorial](https://software-engineering.devbit.courses/09-unit-testing/jest.html)
+and add some tests to your application.
+
+Testing the code using a testing framework will render your `index.ts` useless.
+No more need to manually run your application and inspect the results. If something
+is wrong, your tests should warn you.
+
+Tip: You could try to migrate some parts of your `index.ts` file to unit tests.
+
+* Add at least 10 different unit tests to your application (you are free to add
+more tests if you want to).
+* Cover at least 3 different classes with your test.
+
+Don't forget to publish your package on npm, update your git tags, upload tags to
+github, update docs, update README... (if needed).
