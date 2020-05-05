@@ -299,7 +299,7 @@ Use only `ts-node` to run and test your code, but not the `tsc` command as this 
 
 ## v0.4.3 Linter
 
-> **lint**, or a **linter**, is a tool that analyzes source code to flag_ programming errors_, _bugs_, _stylistic errors_, and _suspicious constructs_.
+> **lint**, or a **linter**, is a tool that analyzes source code to flag _programming errors_, _bugs_, _stylistic errors_, and _suspicious constructs_.
 
 In order to prevent errors or bugs the project must be checked using a Linter.
 
