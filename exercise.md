@@ -598,3 +598,22 @@ more tests if you want to).
 
 Don't forget to publish your package on npm, update your git tags, upload tags to
 github, update docs, update README... (if needed).
+
+### GitHub Action for running tests
+
+In order to automatically get feedback from any failing tests on GitHub, a
+GitHub Action can be used. The setup of an action is beyond the scope of this exercise.
+Therefore a prepared configuration is made available.
+
+To get the configuration into your project, simply run the following pull command:
+
+```shell
+git pull git@github.com:vives-software-engineering-2020/home-automation.git gh-action-test
+```
+
+The result of this GitHub Action can be visualized using a badge. Add the following
+badge to your `README.md` file:
+
+```text
+![Tests](../../workflows/test/badge.svg?branch=master)
+```
