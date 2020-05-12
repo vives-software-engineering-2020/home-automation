@@ -615,5 +615,5 @@ The result of this GitHub Action can be visualized using a badge. Add the follow
 badge to your `README.md` file:
 
 ```text
-![Tests](../../workflows/tests/badge.svg?branch=master)
+![Tests](../../workflows/Tests/badge.svg?branch=master)
 ```
